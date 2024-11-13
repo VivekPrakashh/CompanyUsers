@@ -34,27 +34,36 @@ class _UserlistState extends State<Userlist> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber.shade100,
+      appBar: AppBar(
+        title: const Center(
+            child: Text(
+          'Users',
+          style: TextStyle(fontSize: 25),
+        )),
+        backgroundColor: Colors.black,
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
           child: Column(
             children: [
-              Text(
-                'User List',
-                style: TextStyle(fontSize: 25, color: Colors.blue),
-              ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextField(
                 controller: _searchController,
+                cursorColor: Colors.black,
                 decoration: InputDecoration(
                   hintText: 'Search by name',
-                  prefixIcon: Icon(Icons.search),
+                  hintStyle: const TextStyle(color: Colors.black),
+                  prefixIcon: const Icon(Icons.search),
+                  prefixIconColor: Colors.black,
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: Colors.black),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Consumer<UserProvider>(builder: (context, value, child) {
                 if (value.isLoading) {
                   return const Center(
@@ -87,24 +96,28 @@ class _UserlistState extends State<Userlist> {
                             );
                           },
                           child: Container(
-                            color: Colors.grey.shade300,
-                            margin: EdgeInsets.symmetric(
+                            margin: const EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 10),
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 10),
                             height: 70,
                             width: double.maxFinite,
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(15)),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   user.name,
-                                  style: TextStyle(fontSize: 18),
+                                  style: const TextStyle(
+                                      fontSize: 18, color: Colors.yellow),
                                 ),
-                                SizedBox(height: 10),
+                                const SizedBox(height: 10),
                                 Text(
                                   user.email,
-                                  style: TextStyle(fontSize: 15),
+                                  style: const TextStyle(
+                                      fontSize: 16, color: Colors.yellow),
                                 ),
                               ],
                             ),
