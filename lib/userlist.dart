@@ -88,12 +88,20 @@ class _UserlistState extends State<Userlist> {
                         final user = users[index];
                         return InkWell(
                           onTap: () async {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => UserDetail(user: user),
-                              ),
-                            );
+                            try {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UserDetail(user: user),
+                                ),
+                              );
+                            } catch (error) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Failed to load user details.'),
+                                ),
+                              );
+                            }
                           },
                           child: Container(
                             margin: const EdgeInsets.symmetric(

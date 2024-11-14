@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:signindemo/provider/user_provider.dart';
+import 'package:signindemo/splash_screen.dart';
 import 'package:signindemo/userlist.dart';
 
 void main() {
@@ -29,9 +30,10 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.blue,
           ),
-          home: Userlist(),
+           debugShowCheckedModeBanner: false,
+          home: Splash(),
           routes: {
-            '/userlist': (context) => const Userlist(),
+            '/splash': (context) => const Splash(),
           },
         ));
   }
