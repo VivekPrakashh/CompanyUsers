@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:signindemo/provider/user_provider.dart';
-import 'package:signindemo/userdetail.dart';
+import 'package:userlist/provider/user_provider.dart';
+import 'package:userlist/userdetail.dart';
 
 class Userlist extends StatefulWidget {
   const Userlist({super.key});

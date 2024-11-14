@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signindemo/userlist.dart';
+import 'package:userlist/userlist.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});

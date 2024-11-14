@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:provider/provider.dart';
-import 'package:signindemo/modal/user.dart';
-import 'package:signindemo/provider/user_provider.dart';
+import 'package:userlist/modal/user.dart';
+import 'package:userlist/provider/user_provider.dart';
 
 class UserDetail extends StatefulWidget {
   UserDetail({super.key, required this.user});

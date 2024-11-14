@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:signindemo/modal/user.dart';
+import 'package:userlist/modal/user.dart';
 
 class UserService {
  Future<List<User>> getAll() async {

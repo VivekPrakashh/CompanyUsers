@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:signindemo/provider/user_provider.dart';
-import 'package:signindemo/splash_screen.dart';
-import 'package:signindemo/userlist.dart';
+import 'package:userlist/provider/user_provider.dart';
+import 'package:userlist/splash_screen.dart';
+import 'package:userlist/userlist.dart';
 
 void main() {
   runApp(const MyApp());

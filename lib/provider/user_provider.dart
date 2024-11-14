@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signindemo/modal/user.dart';
-import 'package:signindemo/services/user_services.dart';
+import 'package:userlist/modal/user.dart';
+import 'package:userlist/services/user_services.dart';
 
 class UserProvider extends ChangeNotifier{
   final _service = UserService();
