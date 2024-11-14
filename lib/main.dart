@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         create: (context) => UserProvider(),
         child: MaterialApp(
           title: 'Flutter Demo',
+    
           theme: ThemeData(
             // This is the theme of your application.
             //
@@ -30,7 +31,10 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.blue,
           ),
-           debugShowCheckedModeBanner: false,
+          
+            
+          
+          debugShowCheckedModeBanner: false,
           home: Splash(),
           routes: {
             '/splash': (context) => const Splash(),

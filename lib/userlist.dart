@@ -36,6 +36,7 @@ class _UserlistState extends State<Userlist> {
     return Scaffold(
       backgroundColor: Colors.amber.shade100,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Center(
             child: Text(
           'Users',
